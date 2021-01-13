@@ -15,6 +15,9 @@ class CreateReactablesTable extends Migration
     {
         Schema::create('reactables', function (Blueprint $table) {
             $table->id();
+            $table->integer('reaction_id');
+            $table->string('reactable_type');
+            $table->integer('reactable_id');
             $table->timestamps();
         });
     }
